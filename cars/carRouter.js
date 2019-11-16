@@ -47,5 +47,19 @@ router.delete('/:id', (req, res) => {
 });
 
 
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+
+    db('cars').where({id}).update(changes)
+        .then(count => {
+            res.json({ updated: count });
+        })
+        .catch(err => {
+            res.status(500).json({ message: 'Unable to update the car' });
+        });
+    
+});
+
 
 module.exports = router;
