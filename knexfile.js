@@ -9,14 +9,14 @@ module.exports = {
       filename: './data/car-dealer.db3'
     },
     useNullAsDefault: true, // helps prevent errors
-  },
 
-  migrations: {
-    directory: './data/migrations'
+    migrations: {
+      directory: './data/migrations'
+    },
+  
+    seeds: {
+      directory: './data/seeds'
+    }
   },
-
-  seeds: {
-    directory: './data/seeds'
-  }
 
 };
