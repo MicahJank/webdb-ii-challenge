@@ -4,9 +4,13 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3', // the kind of database knex will work with
+    client: 'pg', // the kind of database knex will work with
     connection: {
-      filename: './data/car-dealer.db3'
+      // filename: './data/car-dealer.db3'
+      host: 'localhost',
+      user: 'testUser',
+      password: 'password123',
+      database: 'testDB'
     },
     useNullAsDefault: true, // helps prevent errors
     migrations: {
