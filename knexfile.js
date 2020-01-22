@@ -9,7 +9,6 @@ module.exports = {
       filename: './data/car-dealer.db3'
     },
     useNullAsDefault: true, // helps prevent errors
-
     migrations: {
       directory: './data/migrations'
     },
@@ -18,5 +17,5 @@ module.exports = {
       directory: './data/seeds'
     }
   },
-
+  
 };
